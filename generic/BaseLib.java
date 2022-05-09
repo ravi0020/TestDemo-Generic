@@ -97,7 +97,7 @@ public class BaseLib extends AppListeners {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\exefiles\\chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary("C:\\Google\\Chrome\\Application\\chrome.exe");
+			options.setBinary("C:\\program fiels\\Google\\Chrome\\Application\\chrome.exe");
 			options.addArguments("disable-infobars");
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
