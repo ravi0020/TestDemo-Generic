@@ -71,6 +71,8 @@ public class BaseLib extends AppListeners {
 	
 	@BeforeSuite
 	public void reportConfig(){
+	
+	
 		DateFormat dateFormat = new SimpleDateFormat("yy_MM_dd_hh_mm_ss");
 		Date date = new Date();
 		extentReport = new ExtentReports(
@@ -90,12 +92,12 @@ public class BaseLib extends AppListeners {
 	
 	@Parameters(value = "browser")
 	@BeforeClass
-	public void config(String browserName){
+	public void configWithUpdate(String browserName){
 		if (browserName.equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\exefiles\\chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+			options.setBinary("C:\\Google\\Chrome\\Application\\chrome.exe");
 			options.addArguments("disable-infobars");
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
